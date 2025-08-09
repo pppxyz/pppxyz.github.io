@@ -1,5 +1,148 @@
-<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>pappos.xyz</title>
-<style>body{margin:0;display:grid;place-items:center;height:100vh;font:16px system-ui;background:#0f172a;color:#e5e7eb}
-.box{padding:32px 28px;border:1px solid #273043;border-radius:16px;background:#111827}</style>
-<div class="box"><h1>pappos.xyz</h1><p>Landing page coming soon.</p></div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>pappos.xyz — Andreas Pappos</title>
+
+  <!-- Meta / social cards -->
+  <meta name="description" content="Personal site of Andreas Pappos. Minimal landing page with contact and links." />
+  <meta property="og:title" content="pappos.xyz — Andreas Pappos" />
+  <meta property="og:description" content="Personal site of Andreas Pappos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pappos.xyz" />
+  <meta property="og:image" content="https://pappos.xyz/og.png" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <style>
+    :root{
+      --bg:#0b1220;        /* page background */
+      --panel:#0f172a;     /* card background */
+      --text:#e5e7eb;      /* primary text */
+      --muted:#9ca3af;     /* secondary text */
+      --line:#1f2937;      /* borders */
+      --accent:#22d3ee;    /* link & accent */
+      --accent-ink:#0b2a31;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 80% -10%, #1e293b 0%, rgba(30,41,59,0) 60%),
+        radial-gradient(900px 600px at -10% 120%, #0ea5e9 0%, rgba(14,165,233,0) 55%),
+        var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{min-height:100%;display:grid;place-items:center;padding:48px 18px}
+    .card{
+      width:min(980px,94vw);
+      background:color-mix(in oklab, var(--panel) 88%, #000 12%);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px 28px 24px;
+      box-shadow:0 30px 80px rgba(0,0,0,.35);
+      backdrop-filter:blur(6px);
+      transform:translateY(6px);
+      animation:lift .6s ease both;
+    }
+    @keyframes lift{from{opacity:.0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+    header{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .avatar{
+      width:64px;height:64px;border-radius:14px;display:grid;place-items:center;
+      background:linear-gradient(150deg,#22d3ee,#0ea5e9);color:#082f49;
+      font-weight:800;font-size:24px;letter-spacing:.5px
+    }
+    h1{margin:0;font-size:clamp(26px,3.5vw,36px);line-height:1.25}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:22px}
+    @media (min-width:820px){ .grid{grid-template-columns:1.3fr .7fr} }
+
+    .panel{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:18px 18px;
+      background:color-mix(in oklab, var(--panel) 96%, #000 4%);
+    }
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 14px;border:1px solid var(--line);border-radius:12px;color:var(--text)
+    }
+    .btn.primary{
+      background:var(--accent);color:var(--accent-ink);border:none;font-weight:700
+    }
+    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--line);
+      border-radius:999px;font-size:12px;color:var(--muted)}
+    ul.links{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    ul.links li a{display:flex;justify-content:space-between;border:1px solid var(--line);
+      border-radius:12px;padding:10px 12px;background:color-mix(in oklab, var(--panel) 95%, #000 5%)}
+    ul.links .hint{color:var(--muted);font-size:12px}
+
+    footer{margin-top:18px;color:#94a3b8;font-size:13px;display:flex;gap:8px;flex-wrap:wrap}
+    .dot{width:6px;height:6px;border-radius:50%;background:#22d3ee;display:inline-block;vertical-align:middle}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+
+      <header>
+        <div class="avatar">AP</div>
+        <div>
+          <h1>Andreas Pappos</h1>
+          <div class="muted">Building things, writing notes, keeping it simple.</div>
+        </div>
+      </header>
+
+      <div class="grid">
+        <div class="panel">
+          <span class="pill">pappos.xyz</span>
+          <p style="margin:12px 0 0">
+            Hi—this is my temporary landing page while I set up the rest.
+            You can reach me by email or follow my work below.
+          </p>
+          <div class="btns">
+            <a class="btn primary" href="mailto:andreas@pappos.xyz" aria-label="Send email">Contact me</a>
+            <a class="btn" href="https://github.com/pppxyz" target="_blank" rel="noopener">GitHub</a>
+            <!-- Add more buttons if you like -->
+            <!-- <a class="btn" href="LINKEDIN_URL" target="_blank" rel="noopener">LinkedIn</a> -->
+            <!-- <a class="btn" href="X_OR_TWITTER_URL" target="_blank" rel="noopener">X / Twitter</a> -->
+          </div>
+        </div>
+
+        <div class="panel">
+          <ul class="links">
+            <li>
+              <a href="https://github.com/pppxyz/pppxyz.github.io" target="_blank" rel="noopener">
+                Site source on GitHub <span class="hint">public repo</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:andreas@pappos.xyz">andreas@pappos.xyz <span class="hint">email</span></a>
+            </li>
+            <li>
+              <a href="https://pppxyz.github.io" target="_blank" rel="noopener">
+                pppxyz.github.io <span class="hint">fallback URL</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        <span class="dot"></span>
+        <span>© <span id="year"></span> Andreas Pappos</span>
+        <span class="muted">— temporary landing page</span>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
